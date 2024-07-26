@@ -21,6 +21,11 @@
       width: 785px !important;
     }
   }
+
+  .Cards{
+    max-height: 726px !important;
+    overflow-y: scroll;
+  }
  
 th{
     position: sticky;

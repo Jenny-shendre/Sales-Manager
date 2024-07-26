@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { CiUser } from "react-icons/ci";
-import { FaPhoneAlt } from "react-icons/fa";
-import { CgMail } from "react-icons/cg";
-import { TbBrandTelegram } from "react-icons/tb";
+import { IoIosArrowForward } from "react-icons/io";
+import  CiUser from "../../assets/ion_person-outline.png";
+import  FaPhoneAlt  from "../../assets/call.png";
+import CgMail from "../../assets/ic_outline-email.png";
+import note from "../../assets/add_notes.png";
 import Searchsvg from "../../assets/material-symbols_search.svg";
-import notify from'../../assets/add_notes (black).png';
+
+import '../Home.css';
 
 
 const TabBar = ({ activeTab, setActiveTab }) => (
-  <div className="flex mb-4 justify-center">
+  <div className="flex mb-4 justify-center ">
     {['All', 'Available', 'In Meet'].map((tab) => (
       <button
         key={tab}
-        style={{borderRadius:'24px 0px 0px 24px', borderRadius:'0px'}}
-        className={` px-4 py-2 ${activeTab === tab ? 'bg-[#3D2314] text-white' : 'bg-white text-[#3D2314]'}`}
+        className={` px-4 py-2 ${activeTab === tab ? 'bg-[#3D2314] text-white rounded-l-[24px]' : 'bg-white text-[#3D2314] '}`}
         onClick={() => setActiveTab(tab)}>
         {tab}
       </button>
@@ -29,19 +30,40 @@ const TabBar = ({ activeTab, setActiveTab }) => (
   
 
   return (
-    <div className="bg-[#F7F3E8] p-4">
-        <div>
-      <h1 className=" mt-8 text-[24px]">
-        Home / <span className="font-medium text-[24px] font-bold">Notes</span>
-      </h1>
-    </div>
+    <div className='p-4 pt-0'>
+       <div
+          style={{ gap: "20px", paddingTop: "30px",  fontFamily: 'Manrope'}}
+          className="p-4 overflow-x-auto flex flex-col gap-9 bg-custom-bg;
+        "
+        >
+          <h1
+            className="font-bold flex items-center gap-1 font-[Manrope]"
+            style={{
+              fontFamily: "Poppins",
+              fontSize: "24px",
+              fontWeight: "500",
+            }}
+          >
+            Home
+            <IoIosArrowForward style={{ color: "#1C1B1F" }} />
+            <span
+              style={{
+                fontFamily: "Poppins",
+                fontWeight: "500",
+                fontSize: "24px",
+              }}
+              className="font-medium font-[Manrope]"
+            >
+              Notes
+            </span>
+          </h1>
+        </div>
     <br />
     <div className="flex flex-row items-center justify-center">
               <div className="flex justify-start items-center w-[50%] lg:block relative lg:w-[36rem] rounded-full">
                 <input
                   className="w-full py-2 px-12 rounded-full "
                   style={{
-                    border: "1px solid #3D2314",
                     boxShadow: " 0px 0px 4px 0px #00000040",
                   }}
                   type="text"
@@ -64,618 +86,714 @@ const TabBar = ({ activeTab, setActiveTab }) => (
 <div className='Cards gap-8'>
             
 <div className='flex flex-wrap gap-8 mb-[30px]'>
-<div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+<div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
-          Available
+        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-[#F4E8C8] text-[#AF8414] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center text-center">
+          In Meet
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
-          Available
+        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-[#F4E8C8] text-[#AF8414] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center text-center">
+          In Meet
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 </div>
 <div className='flex flex-wrap gap-8 mb-[30px]'>
-<div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+<div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 </div>
 
 <div className='flex flex-wrap gap-8 mb-[30px]'>
-<div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+<div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 
-    <div className=" bg-white rounded-lg shadow-md p-4 max-w-xs w-[310px] h-[272px]">
-      <div className="flex justify-between items-center mb-4">
+    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+  boxShadow: '0px 0px 4px 0px #00000040'
+
+}}>
+      <div className="flex items-center mb-4">
         <div className="">
-        <CiUser className="w-[92px] h-[92px] text-[92px]" />
+        <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
         <div>
-          <h2 style={{fontWeight:'700'}} className="text-[14px] text-center text-[#3D2314]">Sharukh</h2>
-          <div className='flex flex-wrap'>
-            <div className='gap-2'>
-            <CgMail className='text-[24px]'/>
+          <h2 style={{fontFamily: 'Manrope',
+fontSize: '18px',
+fontWeight: '700',
+lineHeight: '24.59px',
+paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
+<div>
+<div className='flex flex-wrap'>
+            
+            <img src={CgMail} className='text-[14px]'/>
+           
+          
+          <p style={{fontFamily: 'Manrope',}} className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> sharukh@gmail.com</p>
+         
+          </div>
+          <div className=' flex flex-wrap pt-[5px]'> 
+           
+            <img src={FaPhoneAlt} className='text-[24px]'/>
 
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> sharukh@gmail.com</p>
+           
+          <p className="text-[#3D2314] text-[14px] ml-3 font-[Manrope]"> 9012345678</p>
+          
           </div>
-          </div>
-          <div className=' flex flex-wrap'> 
-            <div className='gap-2'>
-            <FaPhoneAlt className='text-[24px]'/>
-
-            </div>
-            <div>
-          <p className="text-[#3D2314] text-[14px] ml-[7px]"> 9012345678</p>
-          </div>
-          </div>
+</div>
+        
         </div>
       </div>
-      <div className="flex justify-between mb-4 gap-[10px]" >
+      <div className="flex justify-between mb-4" >
         <div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px]">12</p>
+        <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
         </div>
-        <div className='flex flex-wrap justify-between'>
-          <p className="text-sm text-gray-600">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px]">04</p>
+        <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
+          <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
+          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
         </div>
         </div>
        
-        <div style={{borderRadius:'8px'}} className="w-[70px] h-[28px] bg-green-100 text-green-800 text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
+        <div style={{borderRadius:'8px', fontFamily:'Manrope'}} className="font-[Manrope] w-[70px] h-[28px] bg-[#BAEFB1] text-[#1D750E] text-[12px]  px-[10px] py-[6px] mt-[15px] item-center justify-center">
           Available
         </div>
       </div>
-      <button className="w-full gap-2 bg-white border border-[#3D2314] text-[#3D2314] py-2 px-4 rounded-lg flex items-center justify-center">
+      <button className="font-[Manrope] w-full gap-2 text-[#3D2314] bg-white py-2 px-4 rounded-lg flex items-center justify-center" style={{border:'1px solid #3D2314'}}>
        
-        <TbBrandTelegram className='text-[24px]'/>
+        <img src={note} className='text-[24px]'/>
 
-        Message
+        Add Note
       </button>
     </div>
 </div>

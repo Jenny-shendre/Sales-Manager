@@ -5,7 +5,7 @@ import navicon2 from "../../assets/Vector (2)-2.svg";
 import carbon_customer1 from "../../assets/carbon_customer.svg";
 import carbon_customer2 from "../../assets/carbon_customer - Copy.svg";
 import material1 from "../../assets/add_notes (white).png";
-import material2 from "../../assets/add_notes.png";
+import material2 from "../../assets/ri_team-line.png";
 import Settings2 from "../../assets/Settings.svg";
 import Logout2 from "../../assets/logout.svg";
 import { Link, useLocation } from "react-router-dom";
@@ -27,8 +27,8 @@ const Navber = () => {
       case "/Client":
         setActiveItem("Overview");
         break;
-      case "/Notes":
-        setActiveItem("Notes");
+      case "/My_Team":
+        setActiveItem("My_Team");
         break;
 
       default:
@@ -91,7 +91,7 @@ textAlign: 'left',
               Client
             </li>
           </Link>
-          <Link to="/Notes">
+          <Link to="/My_Team">
             <li
             style={{fontFamily: 'Manrope',
               fontSize: '20px',
@@ -100,17 +100,17 @@ textAlign: 'left',
               textAlign: 'left',
               }}
               className={`text-[#3D2314] cursor-pointer font-medium flex flex-row gap-3 w-auto  lg:w-52 p-2 text-sm lg:text-lg font-[Manrope] ${
-                activeItem === "Notes"
+                activeItem === "My_Team"
                   ? "bg-[#3D2314] text-[#FFFFFF]"
                   : ""
               }`}
-              onClick={() => handleItemClick("Notes")}>
-              {activeItem === "Notes" ? (
+              onClick={() => handleItemClick("My_Team")}>
+              {activeItem === "My_Team" ? (
                 <img src={material1} alt="" />
               ) : (
                 <img src={material2} alt="" />
               )}
-              Notes
+              My Team
             </li>
           </Link>
         </ul>
