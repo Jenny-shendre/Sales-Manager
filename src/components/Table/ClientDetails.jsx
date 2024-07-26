@@ -26,7 +26,7 @@ function ClientDetails() {
             <span
               style={{
                 fontFamily: "Poppins",
-                fontWeight: "400",
+                fontWeight: "500",
                 fontSize: "24px",
               }}
               className="font-medium font-[Manrope]"
@@ -40,7 +40,7 @@ function ClientDetails() {
                 <input
                   className="w-full py-2 px-12 rounded-full "
                   style={{
-                    border: "1px solid #3D2314",
+                    
                     boxShadow: " 0px 0px 4px 0px #00000040",
                   }}
                   type="text"
