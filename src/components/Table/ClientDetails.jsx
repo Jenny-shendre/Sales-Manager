@@ -1,4 +1,5 @@
 import React from "react";
+import '../Home.css';
 import { IoIosArrowForward } from "react-icons/io";
 import Searchsvg from "../../assets/material-symbols_search.svg";
 import { CgNotes } from "react-icons/cg";
@@ -59,26 +60,71 @@ function ClientDetails() {
 
 
 <main className=" overflow-x-hidden overflow-y-auto p-6 font-[Manrope]">
-<div>
-        <div style={{textAlign:'-webkit-center'}}>
+
+        <div style={{textAlign:'-webkit-center'}} >
+        <div className="wrapperF">
           <table className="w-[956px] h-[477px] bg-white shadow-md  overflow-hidden font-[Manrope]">
+          
             <thead className="bg-[#D7D7D7] font-[Manrope]">
               <tr className="text-center text-[#4B4B4B] w-[171px]  h-[36px] font-[Manrope]">
-                <th className="px-4 py-2">Date</th>
-                <th className="px-4 py-2">Project Name</th>
-                <th className="px-4 py-2">Client Name</th>
-                <th className="px-4 py-2">Duration</th>
-                <th className="px-4 py-2">Notes</th>
-                <th className="px-4 py-2">Executive</th>
-                <th className="px-4 py-2 ">Actions</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2 ">Date</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2">Project Name</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2">Client Name</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2">Duration</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2">Notes</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2">Executive</th>
+                <th style={{
+                          fontFamily: "Manrope",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          lineHeight: "16.39px",
+                          color: "#4B4B4B",
+                        }} className="px-4 py-2 ">Actions</th>
               </tr>
             </thead>
-            <tbody>
+            
+            <tbody className="font-[Manrope]">
               <tr className="text-[#5C5C5C] text-center">
                 <td className="px-4 py-2 ">26 June | 5:33 PM</td>
                 <td className="px-4 py-2 ">Project Alayas</td>
                 <td className="px-4 py-2 ">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000] ">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000] " style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2 r">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black " />
@@ -86,14 +132,14 @@ function ClientDetails() {
                 </td>
                 <td className="px-4 py-2">Executive</td>
                 <td className="px-4 py-2 text-center" style={{textAlign:'-webkit-center'}}>
-                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-green-500" />
+                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-[#49DA31]" />
                 </td>
               </tr>
               <tr className=" text-[#5C5C5C] text-center">
                 <td className="px-4 py-2 ">26 June | 5:33 PM</td>
                 <td className="px-4 py-2 ">Project Alayas</td>
                 <td className="px-4 py-2 ">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000] ">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000] " style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2 ">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -101,14 +147,14 @@ function ClientDetails() {
                 </td>
                 <td className="px-4 py-2 ">Executive</td>
                 <td className="px-4 py-2  " style={{textAlign:'-webkit-center'}}>
-                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-green-500" />
+                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-[#49DA31]" />
                 </td>
               </tr>
               <tr className=" text-[#5C5C5C] text-center">
                 <td className="px-4 py-2">26 June | 5:33 PM</td>
                 <td className="px-4 py-2">Project Alayas</td>
                 <td className="px-4 py-2">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000]">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000]" style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -116,14 +162,14 @@ function ClientDetails() {
                 </td>
                 <td className="px-4 py-2">Executive</td>
                 <td className="px-4 py-2" style={{textAlign:'-webkit-center'}}>
-                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-green-500" />
+                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-[#49DA31]" />
                 </td>
               </tr>
               <tr className=" text-[#5C5C5C] text-center">
                 <td className="px-4 py-2">26 June | 5:33 PM</td>
                 <td className="px-4 py-2">Project Alayas</td>
                 <td className="px-4 py-2">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000]">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000]" style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -138,7 +184,7 @@ function ClientDetails() {
                 <td className="px-4 py-2">26 June | 5:33 PM</td>
                 <td className="px-4 py-2">Project Alayas</td>
                 <td className="px-4 py-2">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000]">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000]" style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -153,7 +199,7 @@ function ClientDetails() {
                 <td className="px-4 py-2">26 June | 5:33 PM</td>
                 <td className="px-4 py-2">Project Alayas</td>
                 <td className="px-4 py-2">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000]">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000]" style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -168,7 +214,7 @@ function ClientDetails() {
                 <td className="px-4 py-2">26 June | 5:33 PM</td>
                 <td className="px-4 py-2">Project Alayas</td>
                 <td className="px-4 py-2">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000]">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000]" style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -176,14 +222,14 @@ function ClientDetails() {
                 </td>
                 <td className="px-4 py-2">Executive</td>
                 <td className="px-4 py-2" style={{textAlign:'-webkit-center'}}>
-                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-green-500" />
+                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-[#49DA31]" />
                 </td>
               </tr>
               <tr className="text-[#5C5C5C] text-center">
                 <td className="px-4 py-2">26 June | 5:33 PM</td>
                 <td className="px-4 py-2">Project Alayas</td>
                 <td className="px-4 py-2">Rajesh Choudhary</td>
-                <td className="px-4 py-2 text-[#000000]">00 : 00</td>
+                <td className="px-4 py-2 text-[#000000]" style={{fontWeight:'800'}}>00 : 00</td>
                 <td className="px-4 py-2">
                   <div style={{textAlign:'-webkit-center'}}>
                     <CgNotes className="w-[20px] h-[22px] text-black" />
@@ -191,11 +237,14 @@ function ClientDetails() {
                 </td>
                 <td className="px-4 py-2">Executive</td>
                 <td className="px-4 py-2" style={{textAlign:'-webkit-center'}}>
-                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-green-500" />
+                  <IoCheckmarkOutline className="w-[24px] h-[24px] text-[#49DA31]" />
                 </td>
               </tr>
             </tbody>
+            
+           
           </table>
+          
         </div>
 </div>        
       </main>
