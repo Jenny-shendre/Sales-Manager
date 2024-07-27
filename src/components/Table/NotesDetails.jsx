@@ -14,7 +14,8 @@ const TabBar = ({ activeTab, setActiveTab }) => (
     {['All', 'Available', 'In Meet'].map((tab) => (
       <button
         key={tab}
-        className={` px-4 py-2 ${activeTab === tab ? 'bg-[#3D2314] text-white rounded-l-[24px]' : 'bg-white text-[#3D2314] '}`}
+        style={{fontFamily:'Manrope', padding:'10px 10px', width:'121px'}}
+        className={` px-4 py-2 ${activeTab === tab ? 'bg-[#3D2314] text-white rounded-[24px]' : 'bg-white text-[#3D2314] '}`}
         onClick={() => setActiveTab(tab)}>
         {tab}
       </button>
@@ -86,11 +87,11 @@ const TabBar = ({ activeTab, setActiveTab }) => (
 <div className='Cards gap-8'>
             
 <div className='flex flex-wrap gap-8 mb-[30px]'>
-<div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+<div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -121,15 +122,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -145,11 +146,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -180,15 +181,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -204,11 +205,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -239,15 +240,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -263,11 +264,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -298,15 +299,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -323,11 +324,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
     </div>
 </div>
 <div className='flex flex-wrap gap-8 mb-[30px]'>
-<div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+<div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -358,15 +359,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -382,11 +383,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -417,15 +418,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -441,11 +442,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -476,15 +477,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -500,11 +501,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -535,15 +536,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -561,11 +562,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
 </div>
 
 <div className='flex flex-wrap gap-8 mb-[30px]'>
-<div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+<div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -596,15 +597,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -620,11 +621,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -655,15 +656,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -679,11 +680,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -714,15 +715,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
@@ -738,11 +739,11 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
       </button>
     </div>
 
-    <div className=" bg-white rounded-[12px] p-[24px] max-w-xs w-[310px] h-[272px]" style={{
+    <div className=" bg-white rounded-[12px] p-[12px] max-w-xs w-[310px] h-[272px]" style={{
   boxShadow: '0px 0px 4px 0px #00000040'
 
 }}>
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-between">
         <div className="">
         <img src={CiUser} className="w-[92px] h-[92px] text-[92px]" />
         </div>
@@ -773,15 +774,15 @@ paddingBottom:'10px'}} className=" text-center text-[#3D2314]">Sharukh</h2>
         
         </div>
       </div>
-      <div className="flex justify-between mb-4" >
+      <div className="flex items-center mb-4 justify-between">
         <div>
         <div className='flex flex-wrap justify-between' style={{alignContent:'center'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Attended</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">12</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">12</p>
         </div>
         <div className='flex flex-wrap justify-between ' style={{alignContent:'center', paddingTop:'5px'}}>
           <p className="text-sm text-gray-600 font-[Manrope]">Clients Converted</p>
-          <p className="text-lg font-semibold ml-[30px] font-[Manrope]">04</p>
+          <p className="text-lg font-semibold ml-[7px] font-[Manrope]">04</p>
         </div>
         </div>
        
